@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustentaEstufa - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h2>SustentaEstufa 🌱</h2>
+        </div>
+        <nav>
+            <a href="#" class="nav-link active" data-target="simulador-page">Simulador</a>
+            <a href="#" class="nav-link" data-target="sobre-mim-page">Sobre Mim</a>
+            <a href="#" class="nav-link" data-target="agrinho-page">Sobre o Agrinho</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="simulador-page" class="page active">
+            <h2>Simulador de Estufa de Fumo Sustentável</h2>
+            <p class="description">
+                Regule as variáveis abaixo para simular o processo de cura do fumo. O equilíbrio correto garante a qualidade da folha e evita o desperdício de lenha/energia, alinhado ao futuro sustentável.
+            </p>
+
+            <div class="simulator-container">
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="fase">Fase da Secagem:</label>
+                        <select id="fase">
+                            <option value="amarelamento">Amarelamento (Inicial)</option>
+                            <option value="murchamento">Murchamento / Fixação da Cor</option>
+                            <option value="secagem-lamina">Secagem da Lâmina (Folha)</option>
+                            <option value="secagem-talo">Secagem do Talo (Final)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="temp">Temperatura: <span id="temp-val">35</span>°C</label>
+                        <input type="range" id="temp" min="20" max="80" value="35">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="umidade">Umidade Relativa: <span id="umidade-val">85</span>%</label>
+                        <input type="range" id="umidade" min="10" max="100" value="85">
+                    </div>
+                </div>
+
+                <div class="display-panel" id="status-painel">
+                    <h3>Status do Sistema</h3>
+                    <div class="status-indicator" id="status-indicator">Aguardando dados...</div>
+                    <p id="feedback-texto">Selecione as variáveis para iniciar a análise da estufa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mim-page" class="page">
+            <h2>Sobre Mim</h2>
+            <div class="about-card">
+                <h3>[Seu Nome Completo]</h3>
+                <p><strong>Estudante:</strong> 3º Ano do Ensino Médio</p>
+                <p><strong>Escola:</strong> [Nome da sua Escola Estadual ou Particular]</p>
+                <p><strong>Cidade/Estado:</strong> [Sua Cidade - PR]</p>
+                <br>
+                <p>
+                    Desenvolvi este projeto motivado pela busca de soluções tecnológicas aplicadas ao agronegócio familiar da nossa região. O simulador visa conscientizar sobre a eficiência energética e o controle preciso de recursos nas estufas de fumo, reduzindo a pegada de carbono e otimizando a produção.
+                </p>
+            </div>
+        </section>
+
+        <section id="agrinho-page" class="page">
+            <h2>Sobre o Concurso Agrinho</h2>
+            <div class="agrinho-container">
+                <div class="image-placeholder">
+                    <img src="agrinho2026.png" alt="Logotipo do Concurso Agrinho 2026" onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='block';">
+                    <div id="img-fallback" style="display:none; padding: 40px; background: #e0e0e0; color: #666; border-radius: 8px;">
+                        [Insira a foto do Concurso Agrinho 2026 aqui! Salve o arquivo como "agrinho2026.png" na mesma pasta]
+                    </div>
+                </div>
+                
+                <div class="agrinho-text">
+                    <h3>Tema 2026: “Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente”</h3>
+                    <p>
+                        O Programa Agrinho é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR. Há décadas, ele incentiva o desenvolvimento de propostas pedagógicas que integram a realidade do campo, a inovação e a preservação ambiental.
+                    </p>
+                    <p>
+                        A edição de 2026 reforça que a força do agro não está apenas no volume de produção, mas na inteligência ecológica aplicada aos processos produtivos, garantindo recursos para as próximas gerações.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto Desenvolvido para o Concurso Agrinho</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
